@@ -33,13 +33,11 @@ console.log(recFac(5));
 */
 
 function sumDigit(n){
-  if (n < 1) return 0;
+  n = Math.floor(n);
+  if (n < 1) 
+    return 0;
   else
-    return Math.floor(n%10 + sumDigit(n/10));
-  // while (n >= 10){
-  //   n /= 10;
-  // }
-  // return Math.floor(n);
+    return n%10 + (sumDigit(n/10));
 }
 
 console.log(sumDigit(01234));
